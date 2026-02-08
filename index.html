@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & GitHub - A Complete Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Git & GitHub</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about-git" class="nav-link">Git</a></li>
+                    <li><a href="#about-github" class="nav-link">GitHub</a></li>
+                    <li><a href="#commands" class="nav-link">Commands</a></li>
+                    <li><a href="#resources" class="nav-link">Resources</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Master Git & GitHub</h1>
+                    <p class="hero-subtitle">Your comprehensive guide to version control and collaborative development</p>
+                    <div class="hero-buttons">
+                        <a href="#about-git" class="btn btn-primary">Learn Git</a>
+                        <a href="#about-github" class="btn btn-secondary">Explore GitHub</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="code-title">terminal</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code>$ git init
+$ git add .
+$ git commit -m "Initial commit"
+$ git remote add origin https://github.com/user/repo.git
+$ git push -u origin main</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-git" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What is Git?</h2>
+                    <p class="section-subtitle">The distributed version control system that powers modern development</p>
+                </div>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h3 class="card-title">Version Control</h3>
+                        <p class="card-description">Track changes in your code over time with complete history and the ability to revert to any previous state.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="card-title">Collaboration</h3>
+                        <p class="card-description">Work seamlessly with teams through branching, merging, and conflict resolution capabilities.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="card-title">Backup & Recovery</h3>
+                        <p class="card-description">Never lose your work with distributed repositories that provide redundancy and safety.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-github" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What is GitHub?</h2>
+                    <p class="section-subtitle">The world's leading platform for Git repository hosting and collaboration</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Repository Hosting</h3>
+                            <p class="feature-description">Store your Git repositories in the cloud with unlimited public and private repositories.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Pull Requests</h3>
+                            <p class="feature-description">Propose changes, discuss modifications, and merge code through collaborative workflows.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Issue Tracking</h3>
+                            <p class="feature-description">Manage bugs, feature requests, and project tasks with integrated issue tracking.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Actions & CI/CD</h3>
+                            <p class="feature-description">Automate your workflows with GitHub Actions for testing, deployment, and more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="commands" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Essential Git Commands</h2>
+                    <p class="section-subtitle">Master these fundamental commands to work efficiently with Git</p>
+                </div>
+                <div class="commands-grid">
+                    <div class="command-category">
+                        <h3 class="category-title">Setup & Configuration</h3>
+                        <div class="command-list">
+                            <div class="command-item">
+                                <code class="command">git config --global user.name "Your Name"</code>
+                                <span class="command-desc">Set your username</span>
+                            </div>
+                            <div class="command-item">
+                                <code class="command">git config --global user.email "email@example.com"</code>
+                                <span class="command-desc">Set your email</span>
+                            </div>
+                            <div class="command-item">
+                                <code class="command">git init</code>
+                                <span class="command-desc">Initialize a new repository</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="command-category">
+                        <h3 class="category-title">Basic Operations</h3>
+                        <div class="command-list">
+                            <div class="command-item">
+                                <code class="command">git add .</code>
+                                <span class="command-desc">Stage all changes</span>
+                            </div>
+                            <div class="command-item">
+                                <code class="command">git commit -m "Message"</code>
+                                <span class="command-desc">Commit staged changes</span>
+                            </div>
+                            <div class="command-item">
+                                <code class="command">git status</code>
+                                <span class="command-desc">Check repository status</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="command-category">
+                        <h3 class="category-title">Branching & Merging</h3>
+                        <div class="command-list">
+                            <div class="command-item">
+                                <code class="command">git branch</code>
+                                <span class="command-desc">List branches</span>
+                            </div>
+                            <div class="command-item">
+                                <code class="command">git checkout -b new-branch</code>
+                                <span class="command-desc">Create and switch branch</span>
+                            </div>
+                            <div class="command-item">
+                                <code class="command">git merge branch-name</code>
+                                <span class="command-desc">Merge branches</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="command-category">
+                        <h3 class="category-title">Remote Operations</h3>
+                        <div class="command-list">
+                            <div class="command-item">
+                                <code class="command">git clone url</code>
+                                <span class="command-desc">Clone remote repository</span>
+                            </div>
+                            <div class="command-item">
+                                <code class="command">git push</code>
+                                <span class="command-desc">Push to remote</span>
+                            </div>
+                            <div class="command-item">
+                                <code class="command">git pull</code>
+                                <span class="command-desc">Pull from remote</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resources" class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Learning Resources</h2>
+                    <p class="section-subtitle">Continue your Git and GitHub journey with these valuable resources</p>
+                </div>
+                <div class="resources-grid">
+                    <a href="https://git-scm.com/doc" target="_blank" class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3 class="resource-title">Official Git Documentation</h3>
+                        <p class="resource-description">Comprehensive reference guide and book from the creators of Git.</p>
+                    </a>
+                    <a href="https://docs.github.com" target="_blank" class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3 class="resource-title">GitHub Docs</h3>
+                        <p class="resource-description">Official documentation for all GitHub features and services.</p>
+                    </a>
+                    <a href="https://learngitbranching.js.org" target="_blank" class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h3 class="resource-title">Learn Git Branching</h3>
+                        <p class="resource-description">Interactive tutorial for understanding Git branching and merging.</p>
+                    </a>
+                    <a href="https://github.com/github/training-kit" target="_blank" class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="resource-title">GitHub Training Kit</h3>
+                        <p class="resource-description">Collection of materials for learning Git and GitHub.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Git & GitHub Guide</span>
+                </div>
+                <p class="footer-text">Created with ❤️ for developers learning version control</p>
+                <div class="footer-links">
+                    <a href="https://git-scm.com" target="_blank" class="footer-link">
+                        <i class="fab fa-git-alt"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="footer-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
