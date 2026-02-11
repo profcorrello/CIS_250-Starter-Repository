@@ -196,6 +196,34 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.opacity = '1';
     });
     
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    if (themeToggle) {
+        // Check for saved theme preference or default to system preference
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        // Apply saved theme or system preference
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            body.classList.add('dark-mode');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+        
+        // Toggle theme on button click
+        themeToggle.addEventListener('click', function() {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            
+            // Update icon
+            themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            
+            // Save preference
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+    }
+
     // Console welcome message
     console.log('%c🚀 Welcome to the Git & GitHub Guide!', 'color: #0366d6; font-size: 20px; font-weight: bold;');
     console.log('%cExplore the world of version control!', 'color: #28a745; font-size: 14px;');

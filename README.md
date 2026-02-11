@@ -11,6 +11,7 @@ A modern, responsive website that provides a comprehensive introduction to Git a
   - Smooth scrolling between sections
   - Copy-to-clipboard functionality for Git commands
   - Animated hero section with code preview
+  - **Dark Mode Toggle** - Switch between light and dark themes with persistent preference
 - **Comprehensive Content**:
   - Git fundamentals and key features
   - GitHub platform overview
@@ -34,7 +35,7 @@ CIS_250-Starter-Repository/
 - **Typography**: Inter font family for optimal readability
 - **Layout**: CSS Grid and Flexbox for responsive layouts
 - **Animations**: Smooth transitions and micro-interactions
-- **Dark Mode Support**: Automatic theme detection via CSS media queries
+- **Dark Mode Support**: Toggle between light and dark themes with persistent user preference via localStorage. Defaults to system preference.
 
 ## 🛠 Technologies Used
 
